@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="./img/logo2.png">
+    <link rel="stylesheet" href="registrationForm.css">
+    <title>Application Form</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="center">ADMISSION APPLICATION FOR INCOMING SENIOR HIGH SCHOOL STUDENTS S.Y 2024-2025</h1>
+
+    <form id="myForm" action="https://script.google.com/macros/s/AKfycbzAPYCDDg8Kmxie65_H6wWcBb5dgxZCRavYNHrqfht1i11zcNjgKuw7rY4FhQKjY1ZHsg/exec" method="post">
+
+      <!-- Personal Information Section -->
+      <h2 class="center1">PERSONAL INFORMATION</h2>
+
+      <div class="flex-container">
+        
+        <div class="upload-picture">
+            <label for="picture">Upload 2x2 picture with white background:</label>
+            <div class="file-input-container">
+              <input type="file" id="picture" name="picture" accept="image/*" required>
+              <button type="button" onclick="showPicture()">View Picture</button>
+              <button type="button" onclick="hidePicture()">Hide Picture</button>
+            </div>
+            <div class="upload-box" id="previewBox"></div>
+        </div>
+
+        <div class="email-address">
+          <label for="email">EMAIL ADDRESS:</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" required>
+        </div>
+      </div>
+
+
+      <div class="name-section">
+        <div>
+            <label for="surname">SURNAME:</label>
+            <input type="text" id="surname" name="surname" placeholder="Family name" required>
+        </div>
+        <div>
+            <label for="first-name">NAME:</label>
+            <input type="text" id="first-name" name="firstName" placeholder="First name" required>
+        </div>
+        <div>
+            <label for="middle-name">MIDDLE NAME:</label>
+            <input type="text" id="middle-name" name="middleName" placeholder="Middle name" required>
+        </div>
+        <div>
+            <label for="suffix">SUFFIX:</label>
+            <input type="text" id="suffix" name="suffix"
+            placeholder="If any">
+        </div>
+        <div>
+            <label for="religion">RELIGION:</label>
+            <input type="text" id="religion" name="religion" placeholder="Religion" required>
+        </div>
+      </div>
+
+      <div class="flex-container">
+
+        <div class="nationality">
+          <label for="nationality">NATIONALITY:</label>
+          <select id="nationality" name="nationality" required>
+            <option value="Filipino">Filipino</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="text" id="otherNationality" name="otherNationality" placeholder="Type your nationality" style="display: none;">
+        </div>        
+
+        <div class="age">
+          <label for="age">AGE:</label>
+          <input type="number" id="age" name="age" placeholder="Enter age" required>
+        </div>
+
+        <div class="date-of-birth">
+          <label for="date-of-birth">DATE OF BIRTH:</label>
+          <input type="date" id="date-of-birth" name="date-of-birth" required>
+        </div>
+
+        <div class="sex">
+          <label for="sex">SEX:</label>
+          <select id="sex" name="sex" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+
+        <div class="place-of-birth">
+          <label for="place-of-birth">PLACE OF BIRTH:</label>
+          <input type="text" id="place-of-birth" name="place-of-birth" placeholder="Place of birth" required>
+        </div>
+
+        <div class="contact-number">
+          <label for="contact-number">CONTACT NUMBER:</label>
+          <input type="tel" id="contact-number" name="contact-number" placeholder="Contact number" pattern="[0-9]+" title="Please enter only numeric values" required>
+        </div>
+      </div>
+
+      <div class="address">
+        <label for="address">ADDRESS:</label>
+        <textarea id="address" name="address" placeholder="House No./Lot No.           Street/Subd./Village                 Barangay                 City/Municipality" required></textarea>
+      </div>
+
+         <!-- Educational Information/Background Section -->
+      <h2 class="center">EDUCATIONAL BACKGROUND</h2>
+
+      <div class="flex-container1">
+        <div class="student-number">
+          <label for="student-number">STUDENT NO:</label>
+          <input type="text" id="student-number" name="student-number">
+        </div>
+  
+        <div class="lrn-section">
+          <label for="lrn">LEARNER'S REFERENCE NUMBER (LRN):</label>
+          <input type="text" id="lrn" name="lrn" placeholder="Enter LRN" pattern="[0-9]+" title="Please enter only numeric values" required>
+        </div>
+      </div>
+      
+
+      
+
+      <div class="flex-container">
+        <div class="high-school-name">
+          <label for="high-school">NAME OF SCHOOL LAST ATTENDED:</label>
+          <input type="text" id="high-school" name="high-school" placeholder="Previous School" required>
+        </div>
+
+        <div class="school-address">
+          <label for="school-address">SCHOOL'S ADDRESS:</label>
+          <textarea id="school-address" name="school-address" placeholder="Enter school address" required></textarea>
+        </div>
+
+        <div class="grade-level-completed">
+          <label for="grade-level-completed">GRADE LEVEL COMPLETED:</label>
+          <input type="text" id="grade-level-completed" name="grade-level-completed" placeholder="S.Y year-year" required>
+        </div>
+        
+      </div>
+
+      <div class="flex-container">
+        
+
+        <div class="class-adviser">
+          <label for="class-adviser">CLASS ADVISER:</label>
+          <input type="text" id="class-adviser" name="class-adviser" placeholder="Grade 10 adviser name " required>
+        </div>
+
+        <div class="section">
+          <label for="section">SECTION:</label>
+          <input type="text" id="section" name="section" placeholder="Section" required>
+        </div>
+      </div>
+      
+      
+      <div class="credentials">
+        <label for="credentials">CREDENTIALS TO BE SUBMITTED:</label>
+        <ul>
+          <li>
+            <input type="checkbox" id="psaCertificate" name="psaCertificate">
+            <label for="psaCertificate">3pcs. Photocopy of PSA Birth Certificate (Long Bond paper)</label>
+          </li>
+          <li>
+            <input type="checkbox" id="formalPictures" name="formalPictures">
+            <label for="formalPictures">3pcs. 2x2 Formal picture (White background)</label>
+          </li>
+          <li>
+            <input type="checkbox" id="plasticEnvelope" name="plasticEnvelope">
+            <label for="plasticEnvelope">1pc. Long plastic envelope</label>
+          </li>
+          <li>
+            <input type="checkbox" id="reportCard" name="reportCard">
+            <label for="reportCard">Report Card/Copy of Grades 10 (1st and 2nd Grading)</label>
+          </li>
+        </ul>
+      </div>
+      
+      
+      
+      
+
+      <!-- Sub-section for Senior High School -->
+      <div class="sub-section center">
+        <h3>SENIOR HIGH SCHOOL</h3>
+
+        <div class="flex-container">
+          <div class="campus">
+            <label for="shs-campus">CHILDREN OF FATIMA SCHOOL INC. CAMPUS:</label>
+            <select id="shs-campus" name="shsCampus" required>
+                <option value="Children of Fatima School Inc. Mabalacat">Children of Fatima School Inc. Mabalacat</option>
+                <option value="Children of Fatima School Inc. Mabiga">Children of Fatima School Inc. Mabiga</option>
+            </select>
+          </div>
+
+          <div class="strands">
+            <label for="strands">STRANDS:</label>
+            <select id="strands" name="strands" required>
+                <option value="Accountancy Business Management (ABM)">Accountancy Business Management (ABM)</option>
+                <option value="Humanities and Social Sciences (HUMSS)">Humanities and Social Sciences (HUMSS)</option>
+                <option value="Information and Communications Technology (ICT)">Information and Communications Technology (ICT)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Family Information/Background Section -->
+      <h2 class="center">FAMILY INFORMATION</h2>
+
+      <!-- Sub-section: Mother's Maiden Name -->
+      <div class="sub-section-left">
+        <h3>MOTHER'S MAIDEN NAME</h3>
+
+        <div class="flex-container">
+          <div class="mother-name">
+            <label for="mother-name">FULL NAME:</label>
+            <input type="text" id="mother-name" name="mother-name" placeholder="First name                     Middle name                    Last name" required>
+          </div>
+
+          <div class="mother-occupation">
+            <label for="mother-occupation">OCCUPATION:</label>
+            <input type="text" id="mother-occupation" name="mother-occupation" placeholder="Occupation" required>
+          </div> 
+        </div>
+
+      </div>
+
+      <!-- Sub-section: Father's Name -->
+      <div class="sub-section-left">
+        <h3>FATHER'S NAME</h3>
+
+        <div class="flex-container">
+          <div class="father-name">
+            <label for="father-name">FULL NAME:</label>
+            <input type="text" id="father-name" name="father-name" placeholder="First name                     Middle name                    Last name" required>
+          </div>
+
+          <div class="father-occupation">
+            <label for="father-occupation">OCCUPATION:</label>
+            <input type="text" id="father-occupation" name="father-occupation" placeholder="Occupation" required>
+          </div> 
+        </div>
+
+      </div>
+
+      <!-- Sub-section: Guardian -->
+      <div class="sub-section-left">
+        <h3>GUARDIAN</h3>
+
+        <div class="flex-container">
+          <div class="guardian-name">
+            <label for="guardian-name">FULL NAME:</label>
+            <input type="text" id="guardian-name" name="guardian-name" placeholder="First name                     Middle name                    Last name" required>
+          </div>
+
+          <div class="guardian-occupation">
+            <label for="guardian-occupation">OCCUPATION:</label>
+            <input type="text" id="guardian-occupation" name="guardian-occupation" placeholder="Occupation" required>
+          </div> 
+        </div>
+
+      </div>
+
+      <div class="pg-contact-number">
+        <label for="pg-contact-number">PARENT'S/GUARDIAN'S CONTACT NUMBER:</label>
+        <input type="tel" id="pg-contact-number" name="pg-contact-number" placeholder="Contact number" pattern="[0-9]+" title="Please enter only numeric values" required>
+      </div>
+
+
+    <!-- Signature Section -->
+    <div class="signature-section">
+      <div class="signature-options">
+        <div id="signature-pad" class="signature-pad">
+          <label for="signature">Signature:</label>
+          <canvas id="signatureCanvas"></canvas>
+          <input type="hidden" id="signatureData" name="signatureData">
+          <button type="button" class="clear-button" data-action="clear">Clear</button>
+        </div>
+        <p>Or</p>
+        <div class="signature-pic">
+          <label for="signatureUpload">Upload Picture of Signature:</label>
+          <input type="file" id="signatureUpload" name="signatureUpload" accept="image/*" >
+          <div id="uploadedSignaturePreview" style="display: none;">
+            <img id="signaturePreviewImg" src="#" alt="Uploaded Signature Preview">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+      <button type="button" onclick="validateForm()">Review Information</button>
+    </form>
+  </div>
+
+  
+
+
+  <!-- Review Information Modal -->
+  <div id="reviewModal" class="modal1">
+    <div class="modal-content1">
+      <span class="close1" onclick="closeReviewModal()">&times;</span>
+      <div id="reviewInformation"></div>
+        <!-- UNDERTAKING section -->
+    <div class="undertaking-section">
+      <h3>UNDERTAKING</h3>
+      <ol><span style="font-weight: 600;">We hereby expressly agree to the following conditions such as, but not limited to:<br><br></span> 
+        <li>To comply with the needed admission requirements. (Student with incomplete Admission Requirements will be considered Temporary Enrolled. Student is given 2 months from the opening of classes or the entire first grading to complete all admission and academic requirements, especially the SF 10/Form 137. An affidavit of understanding/undertaking is submitted, signed by the Parent/ Guardian in order to be temporarily enrolled. Upon complete submission of requirements, the student shall be tagged as officially enrolled. Otherwise, the student cannot be officially promoted to a higher grade level and cannot officially graduate. The school will not release official documents such as SF 9, SF 10, Certificate of Completion and other pertinent documents. Presented admission requirements must be true & correct, in case a document is falsified, enrolment is VOID).<br><br>
+        </li>
+        <li>
+          To give consent to CFSI to collect and process all personal information needed for school operations both in digital and printed materials provided these information will be treated confidential in compliance to Data Privacy Act of 2012. However may be shared only to authorized personnel. (The collected personal information may help the school in understanding its data subjects and may process and share them to the school's authorized representatives namely: School Heads, Registrar, Accounting Staff, Guidance Advocate, Librarian, as well as to Academic and Level Coordinators, Class Advisers and Subject Teachers, relative to the operations of the institution).<br><br>
+        </li>
+        <li>To pay for the required Registration Fee (non-refundable) and make school payments only to authorized school cashier and to request for receipts, otherwise, payments made to unauthorized persons will not be honored; To be updated on all payments of fees, obligations, other charges as prescribed and not to be given his/her periodic/long/final test unless he/she is up-to-date in his/her payments; and not to ask for reimbursement of any payments voluntary or otherwise he/she gave/donated to the school; To pay for the current whole year fees and other charges if he/she transfers or otherwise withdraw, per Department of Education regulation as follows: "The student may be charged all the school fees in full if he/she withdraw any time after the second week of classes."<br><br>
+        </li>
+        <li>To be officially dropped, suspended or expelled if our learner is found to be engaged in bullying and actively participates in any boycott or disruption of classes; or disturb the peace and tranquility of the school or have academic deficiency or violate school rules of discipline; or commit any act unfavorable to the interest of CFSI;<br><br>
+        </li>
+        <li>To return on demand all books or properties he/she rented or borrowed; To pay for any school property that he/she lost damaged or destroyed intentionally or unintentionally;<br><br>
+        </li>
+        <li>To adhere to the visitation policy of parents/guardians/visitors as well as the proper dress code inside the campus.<br><br>
+        </li>
+        <li>To uphold the ideals of Children of Fatima School, Inc. in achieving its philosophy, vision, mission, goals and objectives as wells as its core values. To actively support the institution and all stakeholders as well as maintaining constant open communication to all school authorities for any queries/concern.<br><br>
+        </li>
+        <li>To strictly observe/follow the rules and regulations mandated in the student's handbook/diary and other rules that school authorities may formulate from time to time.<br>
+        </li>
+      </ol>
+    
+    
+      <div class="undertaking-checkbox">
+        <label for="termsCheckbox">I agree to the terms and conditions above.</label>
+        <input type="checkbox" id="termsCheckbox" required>
+        <span id="termsError" class="error-message"></span>
+      </div>
+  
+  </div>
+      <div class="edit-confirm">
+        <button type="button" onclick="editForm()">Edit</button>
+        <button type="button" name="submit-form" onclick="submitForm()">Confirm & Submit</button>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- Confirmation and Instructions Modal -->
+<div id="confirmationModal" class="modal">
+  <div class="modal-content">
+    <div class="content-text">
+      <h2 style="color: #fff;">Confirmation and Instructions</h2>
+      <p>
+        The following are the requirements that need to be brought on enrollment day:
+      </p>
+      <ul>
+        <li>3pcs. Photocopy of PSA Birth Certificate (Long Bond paper)</li>
+        <li>3pcs. 2x2 Formal picture (White background)</li>
+        <li>1pc. Long plastic envelope</li>
+        <li>Report Card/Copy of Grades 10 (1st and 2nd Grading)</li>
+      </ul>
+      <p>
+        On the day of the examination, these requirements need to be submitted. The school will send the student's examination schedule through email or via text message to the parents.
+      </p>
+    </div>
+    <button class="okBtn" onclick="closeModal()">OK</button>
+    <div class="image-container">
+      <img src="img/GROUP5.png" class="background-picture">
+    </div>
+  </div>
+</div>
+
+  
+
+  <script src="viewpic.js"></script>
+  <script src="reviewForm.js"></script>
+  <script src="nationalility.js"></script>
+   <!-- JavaScript for Signature Pad -->
+   <script src="https://cdn.jsdelivr.net/npm/signature_pad"></script>
+   <script>
+     var canvas = document.querySelector("canvas");
+     var signaturePad = new SignaturePad(canvas);
+
+
+    function clearSignature() {
+      var canvas = document.querySelector("#signature-pad canvas");
+      var signaturePad = new SignaturePad(canvas);
+      signaturePad.clear();
+    }
+
+
+    document.querySelector(".clear-button").addEventListener("click", function() {
+      clearSignature();
+    });
+
+
+    var canvas = document.getElementById('signatureCanvas');
+    var signaturePad = new SignaturePad(canvas);
+
+
+    function clearSignature() {
+      signaturePad.clear();
+    }
+
+
+    function updateSignatureData() {
+      var signatureDataInput = document.getElementById('signatureData');
+      signatureDataInput.value = signaturePad.isEmpty() ? '' : signaturePad.toDataURL();
+    }
+
+    canvas.addEventListener('change', updateSignatureData);
+
+
+
+document.getElementById('signatureUpload').addEventListener('change', function() {
+  var file = this.files[0];
+  if (file) {
+    var signaturePreviewImg = document.getElementById('signaturePreviewImg');
+    signaturePreviewImg.src = URL.createObjectURL(file);
+    document.getElementById('uploadedSignaturePreview').style.display = 'block';
+  } else {
+    document.getElementById('uploadedSignaturePreview').style.display = 'none';
+  }
+});
+
+
+
+// Function to convert canvas data to Base64 string
+function convertCanvasToBase64(canvas) {
+  return canvas.toDataURL('image/png');
+}
+
+// Function to clear the canvas
+function clearCanvas() {
+  var canvas = document.getElementById('signatureCanvas');
+  var context = canvas.getContext('2d');
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+// Function to handle form submission
+document.getElementById('myForm').addEventListener('submit', function(e) {
+  // Prevent default form submission
+  e.preventDefault();
+
+  // Convert canvas data to Base64
+  var canvasData = convertCanvasToBase64(document.getElementById('signatureCanvas'));
+
+  // Set the Base64 data as the value of the hidden input field
+  document.getElementById('signatureData').value = canvasData;
+
+  // Submit the form
+  this.submit();
+});
+
+
+
+
+
+
+function submitForm() {
+  var form = document.getElementById("myForm");
+  var formData = new FormData(form);
+  
+  fetch("https://script.google.com/macros/s/AKfycbzAPYCDDg8Kmxie65_H6wWcBb5dgxZCRavYNHrqfht1i11zcNjgKuw7rY4FhQKjY1ZHsg/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.text();
+    } else {
+      throw new Error("Error in form submission");
+    }
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
+
+  openModal();
+}
+
+   </script>
+</body>
+</html>
